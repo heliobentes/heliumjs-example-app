@@ -42,6 +42,26 @@ export const getTaskById = defineMethod(async (args: { id: string }) => {
     } as Task;
 });
 
+export const updateTaskStatus = defineMethod(async (args: { id: string; status: string }) => {
+    const task = await TaskModel.findById(args.id);
+
+    if (!task) {
+        return { success: false, message: "Task not found" };
+    }
+
+    task.status = args.status as "open" | "done";
+    await task.save();
+
+    return {
+        success: true,
+        task: {
+            id: task._id.toString(),
+            name: task.name,
+            status: task.status,
+        } as Task,
+    };
+});
+
 export const createTask = defineMethod(async (args: { name: string }) => {
     const task = await TaskModel.create({
         name: args.name,

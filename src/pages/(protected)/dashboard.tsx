@@ -8,7 +8,7 @@ export default function HomePage() {
 
     return (
         <div>
-            <h1 className="text-3xl font-bold my-4">Welcome to HeliumJS</h1>
+            <h1 className="text-3xl font-bold my-4">Welcome to HeliumJS! 🚀</h1>
             <p className="mb-4 text-gray-600">A small and opinionated framework for building full-stack React applications</p>
             <ul className="list-disc list-inside space-y-2 text-gray-700">
                 <li>File-based RPC framework: no REST, no fetch, no API routes</li>

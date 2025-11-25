@@ -1,6 +1,8 @@
 import { Link, useCall, useFetch } from "helium/client";
-import { createTask, deleteTask, getTasks } from "helium/server";
+import { createTask, deleteTask, getTasks, updateTaskStatus } from "helium/server";
 import { useEffect, useState } from "react";
+
+import { Task } from "../../../types/task";
 
 export default function TasksPage() {
     const [taskName, setTaskName] = useState("");
@@ -18,11 +20,16 @@ export default function TasksPage() {
         isCalling,
         error: errorCreating,
         stats: statsCreating,
+        data: test,
     } = useCall(createTask, {
         invalidate: [getTasks],
     });
 
     const { call: removeTask, isCalling: isDeleting } = useCall(deleteTask, {
+        invalidate: [getTasks],
+    });
+
+    const { call: updateStatus, isCalling: isUpdating } = useCall(updateTaskStatus, {
         invalidate: [getTasks],
     });
 
@@ -50,7 +57,7 @@ export default function TasksPage() {
             <h2 className="text-xl font-semibold mb-4">Open Tasks</h2>
             {isLoading && <p className="text-slate-400">Loading tasks...</p>}
             <div className="flex flex-col gap-2">
-                {tasks?.map((task) => (
+                {tasks?.map((task: Task) => (
                     <Link key={task.id} href={`/tasks/${task.id}`} className="border border-gray-300 hover:shadow-lg p-3 rounded-lg bg-white flex justify-between items-center">
                         {task.name}
 

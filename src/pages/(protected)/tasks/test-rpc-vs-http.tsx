@@ -1,11 +1,11 @@
 import { useCall } from "helium/client";
 import { getTasks } from "helium/server";
 
+const iterations = 100;
 export default function TasksPage() {
-    const { data: tasks, call: fetchTasks } = useCall(getTasks);
+    const { data: _tasks, call: fetchTasks } = useCall(getTasks);
 
     async function measure(name: string, fn: () => Promise<any>) {
-        const iterations = 200;
         const results: number[] = [];
         let lastSize = 0;
 
@@ -54,17 +54,19 @@ export default function TasksPage() {
         <div>
             <h1 className="text-lg font-bold mb-4">Compare RPC vs HTTP</h1>
 
-            <button onClick={fetchTasksViaRPC} className="button primary">
-                Fetch via RPC
-            </button>
+            <div className="flex gap-2">
+                <button onClick={fetchTasksViaRPC} className="button primary">
+                    Fetch via RPC
+                </button>
 
-            <button onClick={fetchTasksViaHTTP} className="button primary">
-                Fetch via HTTP
-            </button>
+                <button onClick={fetchTasksViaHTTP} className="button primary">
+                    Fetch via HTTP
+                </button>
 
-            <button onClick={runComparison} className="button secondary">
-                Run detailed benchmark (200 runs)
-            </button>
+                <button onClick={runComparison} className="button secondary">
+                    Run detailed benchmark ({iterations} runs)
+                </button>
+            </div>
 
             <p>Check the Network tab and console for detailed timing + payload size.</p>
         </div>
