@@ -1,5 +1,5 @@
 import { Link, useCall, useFetch } from "helium/client";
-import { createTask, deleteTask, getTasks, updateTaskStatus } from "helium/server";
+import { createTask, deleteTask, getTasks } from "helium/server";
 import { useEffect, useState } from "react";
 
 import { Task } from "../../../types/task";
@@ -20,16 +20,11 @@ export default function TasksPage() {
         isCalling,
         error: errorCreating,
         stats: statsCreating,
-        data: test,
     } = useCall(createTask, {
         invalidate: [getTasks],
     });
 
     const { call: removeTask, isCalling: isDeleting } = useCall(deleteTask, {
-        invalidate: [getTasks],
-    });
-
-    const { call: updateStatus, isCalling: isUpdating } = useCall(updateTaskStatus, {
         invalidate: [getTasks],
     });
 
