@@ -5,7 +5,7 @@ const config: HeliumConfig = {
     // 0 = local development (no proxies)
     // 1 = single proxy (Vercel, Netlify, Railway, etc.)
     // 2+ = multiple proxies (Cloudflare → Load Balancer → Server)
-    trustProxyDepth: 0,
+    trustProxyDepth: 1,
 
     rpc: {
         // Message encoding: "msgpack" (default, binary) or "json" (text, easier debugging)
