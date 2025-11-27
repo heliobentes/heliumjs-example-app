@@ -1,25 +1,25 @@
-import tailwindcss from '@tailwindcss/vite';
-import react from '@vitejs/plugin-react';
-import helium from 'helium/vite';
-import { defineConfig } from 'vite';
+import tailwindcss from "@tailwindcss/vite";
+import react from "@vitejs/plugin-react";
+import helium from "helium/vite";
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  plugins: [helium(), react(), tailwindcss()],
-  server: {
-    port: 3000,
-  },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          if (id.includes("node_modules")) {
-            return id.toString().split("node_modules/")[1].split("/")[0].toString();
-          }
-          if (id.includes("src/components/")) {
-            return "components"; // Split components into their own chunk
-          }
-        },
-      },
+    plugins: [react(), helium(), tailwindcss()],
+    server: {
+        port: 3000,
     },
-  },
+    build: {
+        rollupOptions: {
+            output: {
+                manualChunks(id) {
+                    if (id.includes("node_modules")) {
+                        return id.toString().split("node_modules/")[1].split("/")[0].toString();
+                    }
+                    if (id.includes("src/components/")) {
+                        return "components"; // Split components into their own chunk
+                    }
+                },
+            },
+        },
+    },
 });
