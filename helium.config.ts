@@ -8,9 +8,6 @@ const config: HeliumConfig = {
     trustProxyDepth: 1,
 
     rpc: {
-        // Message encoding: "msgpack" (default, binary) or "json" (text, easier debugging)
-        encoding: "msgpack",
-
         transport: "websocket", // or "auto" or "json"
 
         // Changes the transport for mobile devices to long-polling HTTP
