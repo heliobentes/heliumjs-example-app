@@ -1,4 +1,4 @@
-import { defineHTTPRequest } from "helium/server";
+import { defineHTTPRequest } from "heliumts/server";
 
 import { auth } from "../libs/better-auth/auth";
 

@@ -1,4 +1,4 @@
-import { defineMethod } from "helium/server";
+import { defineMethod } from "heliumts/server";
 
 export const getServerEnv = defineMethod(async () => {
     // Server-side environment variables are accessible via process.env

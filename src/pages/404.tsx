@@ -1,4 +1,4 @@
-import { Link } from "helium/client";
+import { Link } from "heliumts/client";
 
 export default function NotFoundPage() {
     return (

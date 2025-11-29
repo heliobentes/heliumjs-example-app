@@ -1,5 +1,5 @@
-import { useCall, useFetch } from "helium/client";
-import { getProfile, updateProfile } from "helium/server";
+import { useCall, useFetch } from "heliumts/client";
+import { getProfile, updateProfile } from "heliumts/server";
 import { useEffect, useState } from "react";
 
 export default function ProfilePage() {

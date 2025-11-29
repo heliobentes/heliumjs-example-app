@@ -1,4 +1,4 @@
-import { Link, useRouter } from "helium/client";
+import { Link, useRouter } from "heliumts/client";
 
 export default function DynamicSlugPage({ params }: { params: { slug: string[] } }) {
     const router = useRouter();

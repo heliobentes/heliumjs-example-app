@@ -1,5 +1,5 @@
-import { Link, useFetch, useRouter } from "helium/client";
-import { getTaskById } from "helium/server";
+import { Link, useFetch, useRouter } from "heliumts/client";
+import { getTaskById } from "heliumts/server";
 import { useEffect, useState } from "react";
 
 type TaskDetailProps = {

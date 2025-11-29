@@ -1,5 +1,5 @@
-import { Link, useCall, useFetch } from "helium/client";
-import { createTask, deleteTask, getTasks } from "helium/server";
+import { Link, useCall, useFetch } from "heliumts/client";
+import { createTask, deleteTask, getTasks } from "heliumts/server";
 import { useEffect, useState } from "react";
 
 import { Task } from "../../../types/task";

@@ -1,4 +1,4 @@
-import { middleware } from "helium/server";
+import { middleware } from "heliumts/server";
 
 import { connectToDatabase } from "./db/connection";
 

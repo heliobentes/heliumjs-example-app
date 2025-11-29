@@ -9,7 +9,7 @@ export default function HomePage() {
                 <li>File-based RPC framework: no REST, no fetch, no API routes</li>
                 <li>Server functions live in src/server and are auto-scanned</li>
                 <li>Pages live in src/pages and are file-based routes (NextJS page route style)</li>
-                <li>Client imports server functions via virtual modules (helium/server)</li>
+                <li>Client imports server functions via virtual modules (heliumts/server)</li>
                 <li>Communication happens over a persistent WebSocket RPC protocol</li>
                 <li>Two hooks: useFetch (reactive reads) and useCall (imperative writes)</li>
 

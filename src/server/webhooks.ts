@@ -1,4 +1,4 @@
-import { defineHTTPRequest } from "helium/server";
+import { defineHTTPRequest } from "heliumts/server";
 
 // Example webhook handler for Stripe
 export const stripeWebhook = defineHTTPRequest("POST", "/webhooks/stripe", async (req, _ctx) => {

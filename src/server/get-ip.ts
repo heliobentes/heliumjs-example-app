@@ -1,4 +1,4 @@
-import { defineMethod } from "helium/server";
+import { defineMethod } from "heliumts/server";
 
 export const getIP = defineMethod(async (_args, ctx) => {
     // Access client IP (extracted based on trustProxyDepth config)

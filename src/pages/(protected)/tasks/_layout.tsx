@@ -1,4 +1,4 @@
-import type { LayoutProps } from "helium/client";
+import type { LayoutProps } from "heliumts/client";
 
 export default function TasksLayout({ children }: LayoutProps) {
     return (

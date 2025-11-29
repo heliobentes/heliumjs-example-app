@@ -1,5 +1,5 @@
-import type { LayoutProps } from "helium/client";
-import { Link, useRouter } from "helium/client";
+import type { LayoutProps } from "heliumts/client";
+import { Link, useRouter } from "heliumts/client";
 
 import HeliumLogo from "../../components/Logo";
 

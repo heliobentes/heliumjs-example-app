@@ -1,4 +1,4 @@
-import type { HeliumConfig } from "helium/server";
+import type { HeliumConfig } from "heliumts/server";
 
 const config: HeliumConfig = {
     // Proxy trust depth - set based on your deployment environment

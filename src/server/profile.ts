@@ -1,4 +1,4 @@
-import { defineMethod } from "helium/server";
+import { defineMethod } from "heliumts/server";
 
 import { Profile } from "../types/profile";
 import { ProfileModel } from "./models/Profile";

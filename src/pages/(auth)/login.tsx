@@ -1,4 +1,4 @@
-import { Link } from "helium/client";
+import { Link } from "heliumts/client";
 
 import HeliumLogo from "../../components/Logo";
 import { signIn } from "../../libs/better-auth/auth-client";

@@ -1,6 +1,6 @@
-import type { LayoutProps } from "helium/client";
-import { Link, useFetch, useRouter } from "helium/client";
-import { getProfile } from "helium/server";
+import type { LayoutProps } from "heliumts/client";
+import { Link, useFetch, useRouter } from "heliumts/client";
+import { getProfile } from "heliumts/server";
 import { useEffect } from "react";
 
 import HeliumLogo from "../../components/Logo";

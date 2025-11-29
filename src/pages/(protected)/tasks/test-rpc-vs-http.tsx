@@ -1,5 +1,5 @@
-import { useCall } from "helium/client";
-import { getTasks } from "helium/server";
+import { useCall } from "heliumts/client";
+import { getTasks } from "heliumts/server";
 
 const iterations = 100;
 export default function TasksPage() {
